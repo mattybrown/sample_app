@@ -26,11 +26,11 @@ describe "StaticPages" do
   describe "About Page" do
 	it "Should have h1 'About Us'" do
 	  visit '/static_pages/about'
-	  page.should have_selector('h1' :text => 'About Us')
+	  page.should have_selector('h1', :text => 'About Us')
 	end
 	it "Should have title 'About'" do
 	  visit '/static_pages/about'
-	  page.should have_selector('title' :text => '| About')
+	  page.should have_selector('title', :text => '| About')
 	end
   end
 end
