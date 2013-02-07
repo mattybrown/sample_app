@@ -1,10 +1,21 @@
 class StaticPagesController < ApplicationController
   def home
+	root_path => '/'
+	root_url 'http://localhost:3000/'
   end
 
   def help
+	help_path => '/help'
+	help_url => 'http://localhost:3000/help'
   end
 
   def about
+    about_path => '/about'
+    about_url => 'http://localhost:3000/about'
+  end
+
+  def contact
+	contact_path => '/contact'
+	contact_url => 'http://localhost:3000/contact'
   end
 end
