@@ -7,6 +7,7 @@ gem 'bootstrap-sass'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
+  gem 'annotate', '2.5.0'
   gem 'rspec-rails', '2.11.0'
 end
 
