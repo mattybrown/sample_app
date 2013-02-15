@@ -14,7 +14,7 @@ describe "UserPages" do
       end
     end
 
-    describe "with valid information" }
+    describe "with valid information" do
       before do
 	fill_in "Name",		with: "Example User"
 	fill_in "Email",	with: "user@example.com"
@@ -24,6 +24,11 @@ describe "UserPages" do
 
       it "should create a user" do
 	expect {click_button submit }.to change(User, :count).by(1)
+      end
+      
+      describe "followed by signout" do
+	before { click_link "Sign out" }
+	it { should have_link('Sign in') }
       end
     end
 
